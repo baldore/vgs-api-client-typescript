@@ -3,7 +3,7 @@
     "version": "0.0.1",
     "description": "VGS API Client",
     "repository": "verygoodsecurity/vgs-api-client-typescript",
-    "main": "vgs.js",
+    "main": "vgs.ts",
     "types": "vgs.d.ts",
     "scripts": {
         "clean": "rm -Rf node_modules/ *.js",
