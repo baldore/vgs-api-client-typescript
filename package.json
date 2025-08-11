@@ -1,6 +1,6 @@
 {
     "name": "@vgs/api-client",
-    "version": "XXX.YYY.ZZZ",
+    "version": "0.0.1",
     "description": "VGS API Client",
     "repository": "verygoodsecurity/vgs-api-client-typescript",
     "main": "vgs.js",
