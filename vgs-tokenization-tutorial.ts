@@ -1,8 +1,5 @@
 import * as VGS from './vgs/aliasesApi';
 
-console.log(process.env.VAULT_API_USERNAME);
-console.log(process.env.VAULT_API_PASSWORD);
-
 // Defining the host is optional and defaults to https://api.sandbox.verygoodvault.com.
 // For production use https://api.live.verygoodvault.com
 const config = VGS.config(
