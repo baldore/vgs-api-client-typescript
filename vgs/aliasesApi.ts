@@ -86,6 +86,7 @@ export class Aliases {
     let vgsApiError = new VgsApiError(errorMessage);
     if (error instanceof HttpError) {
       errorMessage += `. Details: ${error.message}`;
+      console.log('whatttttttttt', error.statusCode);
       switch (error.statusCode) { // eslint-disable-line default-case
         case 401:
           vgsApiError = new UnauthorizedError(errorMessage);
