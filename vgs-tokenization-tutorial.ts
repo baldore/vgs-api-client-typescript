@@ -5,7 +5,7 @@ import * as VGS from './vgs/aliasesApi';
 const config = VGS.config(
   process.env.VAULT_API_USERNAME,
   process.env.VAULT_API_PASSWORD,
-  'https://tntmqx4h14u.sandbox.verygoodproxy.com',
+  'https://api.sandbox.verygoodvault.com',
 );
 
 // in this example we are storing three tokens within your VGS vault using a single API call
@@ -29,8 +29,8 @@ const api = new VGS.Aliases(config);
       // see https://www.verygoodsecurity.com/docs/terminology/nomenclature#alias-formats
       // to learn about different formats and representations available
       // to tokenize secured data.
-      format: 'PFPT',
-      value: '4111111111111111',
+    //   format: 'PFPT',
+      value: '4111111111111112',
       // see https://www.verygoodsecurity.com/docs/vault/concepts#classifiers
       // to learn how to classify and tag your data to help secure access and
       // route data compliantly.
@@ -39,18 +39,19 @@ const api = new VGS.Aliases(config);
     },
     // card security code
     {
-      format: 'UUID',
-      value: '123',
+    //   format: 'UUID',
+      value: '4111111111111112',
       classifiers: ['credit-card', 'csc'],
       // learn how volatile storage allows you to maintain full pci compliance
       // https://www.verygoodsecurity.com/docs/terminology/nomenclature#storage
-      storage: 'VOLATILE',
+      storage: 'PERSISTENT',
     },
     // social security number
     {
-      format: 'UUID',
+    //   format: 'UUID',
       value: '078-05-1120',
       classifiers: ['pii', 'ssn'],
+      storage: 'PERSISTENT',
     },
   ];
   console.log('Tokenizing multiple values...');
